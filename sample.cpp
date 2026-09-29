@@ -1,27 +1,10 @@
 #include <iostream>
 #include <string>
 
+#include "Person.h"
+#include "Address.h"
+
 using namespace std;
-
-class Person {
-  public:
-    Person(string n);
-    void printDetails();
-  private:
-    string name;
-    string address;
-};
-
-Person::Person(string n) {
-  name = n;
-  address = "Unknown";
-}
-
-void Person::printDetails() {
-  cout << "Name: " << name << endl;
-  cout << "Address: " << address << endl;
-}
-
 
 int main() {
   cout << "Hello Class" << endl;
@@ -35,6 +18,11 @@ int main() {
   Person *bob = new Person("Bob");
   bob->printDetails();
 
+  Address *adr1 = new Address("Kulanui","Laie");
+  adr1->printAddress();
+
+
   delete bob;
   delete nums;
+  delete adr1;
 }
